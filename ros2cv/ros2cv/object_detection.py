@@ -37,10 +37,10 @@ def main():
         annotated_msg = bridge.cv2_to_imgmsg(annotated, encoding='bgr8')
         annotated_msg.header.stamp = node.get_clock().now().to_msg()
         pub_img.publish(annotated_msg)
-        cv2.imshow("Object Detection",annotated)
+        #cv2.imshow("Object Detection",annotated)
         cv2.waitKey(1)
 
-    node.create_subscription(CompressedImage, '/image/video/compressed', callback, 10)
+    node.create_subscription(CompressedImage, '/camera/image/compressed', callback, 10)
 
     rclpy.spin(node)
     node.destroy_node()
