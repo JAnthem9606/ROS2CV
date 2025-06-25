@@ -28,6 +28,9 @@ setup(
             'object_detection = ros2cv.object_detection:main',
             'publish_image = ros2cv.publish_image:main',
             'view_image = ros2cv.view_image:main',
+            'finger_control = ros2cv.finger_control:main',
+            'stop_sign_control = ros2cv.stop_sign_control:main',
+            'face_control = ros2cv.face_control:main',
         ],
     },
 )
